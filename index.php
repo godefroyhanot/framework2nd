@@ -7,8 +7,4 @@ require_once './autoload.php';
 getLayout('html');
 
 
-
-
-
-
-echo $_GET['page'];
+getPage();

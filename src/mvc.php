@@ -14,6 +14,16 @@ include_once $page;
 
 }
 
+function getPage(){
+    $page = './pages/' . $_GET['page'] . '.page.php';
+       
+    if(file_exists($page)){
+        require_once $page;
+    } else {
+        require_once "./pages/home.page.php";
+    }
+}
+
 function getInclude($includeName){
     $include = './templates/includes/' . $includeName . '.inc.php';
        
@@ -30,8 +40,9 @@ function getInclude($includeName){
     }
 }
 
-
-
 //S'utilise comme : 
 // getLayout('html');
 // getLayout('home');
+
+
+
