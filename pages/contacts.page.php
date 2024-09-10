@@ -9,6 +9,7 @@ if(isset($_POST) && count($_POST)) {
 
     echo $_POST('name') . " a envoyé un message ";
 }
+// dd($contactsConfig);
 
 ?>
 
